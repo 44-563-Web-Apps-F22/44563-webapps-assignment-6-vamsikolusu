@@ -4,33 +4,26 @@
     <title>Vacation</title>
  </head>
 <body>
-
 <h2>Vamsi Krishna Kolusu vacation</h2>
-
 <div class="container">
     <form>
        <div class="iteam">
         <input type="checkbox" id="AirWays" name="vacation" value="true">
         <label for="air">Travel by Air</label></div> 
         <br>
-
         <div class="iteam">
         <input type="checkbox" id="domesticWay" name="vacation" value="true">
         <label for="domestic">Domestic travel</label> </div>
         <br>
-        
         <div class="iteam">
         <input type="checkbox" id="resortWay" name="vacation" value="false">
         <label for="resort">Resort</label> </div>
         <br>
-        
         <div class="iteam">
         <input type="button" class="btn btn-warning" value="Select a vacation" onclick="selectVacation()">
     </div>
-    
     </form>
     <br>
-    
     <script>
         var my_vacation={};
         function selectVacation(){
@@ -63,20 +56,14 @@
     {
         my_vacation.resortWay=false;
     }
-    
-
     document.getElementById("result").innerHTML=JSON.stringify(my_vacation)
 }
     </script>
-    
     <form>
-
         <label for="city">Enter a city</label>
-        <input type="text" id="city" name="propertyname" value="city"> <br>
-        
+        <input type="text" id="city" name="propertyname" value="city"> <br> 
         <label for="price">Enter price</label>
         <input type="text" id="price" name="vacationprice"> <br>
-    
         <input type="button" class="btn btn-success" value="Update the vacation" onclick="updateVacation()">
         <p id="result">A vacation is selected and also updated</p>
     </form> 

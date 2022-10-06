@@ -15,57 +15,52 @@
 <h2>Vamsi Krishna Kolusu vacation</h2>
 <div class="container">
     <form>
-       <div class="iteam">
-        <input type="checkbox" id="AirWays" name="vacation" value="true">
-        <label for="air">Travel by Air</label></div> 
-        <br>
-        <div class="iteam">
-        <input type="checkbox" id="domesticWay" name="vacation" value="true">
-        <label for="domestic">Domestic travel</label> </div>
-        <br>
-        <div class="iteam">
-        <input type="checkbox" id="resortWay" name="vacation" value="false">
-        <label for="resort">Resort</label> </div>
-        <br>
-        <div class="iteam">
-        <input type="button" class="btn btn-warning" value="Select a vacation" onclick="selectVacation()">
-    </div>
+        <input type="checkbox" id="Air1" name="topping1" value="True" checked>
+        <label for="Air1">Travel by Air</label></br>
+
+        <input type="checkbox" id="Domesticname" name="topping2" value="True">
+        <label for="Domesticname">Domestic</label></br>
+
+        <input type="checkbox" id="Resortname" name="topping3" value="False" checked>
+        <label for="Resortname">Resort</label></br>
+
+        <input type="button" onclick="selectVacation()" value="Select a vacation">
     </form>
+    <p id="result"></p>
+    <br>
+</div>
+<br>
+    
     <br>
     <script>
-        var my_vacation={};
-        function selectVacation(){
-            my_vacation={};
-            let throughair=document.getElementById("AirWay").checked
-            let throughdomestic=document.getElementById("domesticWay").checked
-            let throughresort=document.getElementById("resortTWay").checked
-    
-            if(throughair)
-    {
-        my_vacation.AirWay=true;
-    }
-    else
-    {
-        my_vacation.AirWay=false;
-    }
-    if(throughdomestic)
-    {
-        my_vacation.domesticWay=true;
-    }
-    else
-    {
-        my_vacation.domesticWay=false;
-    }
-    if(throughresort)
-    {
-        my_vacation.resortWay=true;
-    }
-    else
-    {
-        my_vacation.resortWay=false;
-    }
-    document.getElementById("result").innerHTML=JSON.stringify(my_vacation)
-}
+         var my_vacation = {}
+            if (document.getElementById("Air1").checked) {
+                my_vacation.Air = true;
+
+            }
+            else {
+                my_vacation.Air = false;
+            }
+            result.innerHTML = result.innerHTML + "\n" + "Air: " + my_vacation.Air
+            if (document.getElementById("Domesticname").checked) {
+                my_vacation.Domestic = true;
+
+            }
+            else {
+                my_vacation.Domestic = false;
+            }
+            result.innerHTML = result.innerHTML + "\n" + "Domestic: " + my_vacation.Domestic
+            if (document.getElementById("Resortname").checked) {
+                my_vacation.Resort = true;
+
+            }
+            else {
+                my_vacation.Resort = false;
+            }
+            result.innerHTML = result.innerHTML + "\n" + "Resort: " + my_vacation.Resort
+
+
+        
     </script>
     <form>
         <label for="city">Enter a city</label>
@@ -73,7 +68,7 @@
         <label for="price">Enter price</label>
         <input type="text" id="price" name="vacationprice"> <br>
         <input type="button" class="btn btn-success" value="Update the vacation" onclick="updateVacation()">
-        <p id="result">A vacation is selected and also updated</p>
+        <p id="result1">A vacation is selected and also updated</p>
     </form> 
 
 <script>
@@ -87,7 +82,7 @@
 
     my_vacation["price"]=price;
 
-    document.getElementById("result").innerHTML=JSON.stringify(my_vacation)
+    document.getElementById("result1").innerHTML=JSON.stringify(my_vacation)
 }
 
    </script>

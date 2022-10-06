@@ -9,36 +9,24 @@
 
 <form>
     <div class="iteam">
-
     <label for="baseamount">Enter base amount </label>
-
     <input type ="number" id="baseamount" name="baseamount" value=20> 
-
 </div>
 <br>
 <div class="iteam">
-
     <label for="discountpercentage">Enter the discount percentage </label>
-
     <input type ="number" id="discountpercentage" name="discountpercentage" value=10 > 
 </div>
 <br>
-
 <div>
     <input type="button" class="btn btn-danger" onclick="discount()" value="Apply discount">
 </div>
-
 </form>
-
 <p id="result">This changes will be seen here</p>
-
 <script> 
-
 function discount (){
-
     let baseamount=document.getElementById("baseamount").value;
     let val=document.getElementById("discountpercentage").value;
-
     let result="";
     for(let i=1;i<6;i++)
     {
@@ -49,10 +37,7 @@ function discount (){
     document.getElementById("result").innerHTML="Discounted amounts for base "+ baseamount +" are "+result;
 }
 </script>
-
-
 <div class="container">
-
     <form>
         <div class="iteam">
         <input type="radio" id="choicetimes" name="operations" onclick="chooseOp()" value="times">
@@ -78,8 +63,8 @@ function discount (){
 <script>
 function chooseOp()
 {
-   let base=document.getElementById("baseamount").value;
-   let discount=document.getElementById("discountpercentage").value;
+   let base=document.getElementById("base").value;
+   let discount=document.getElementById("discount").value;
    let times=document.getElementById("choicetimes").checked;
    let divide=document.getElementById("choicedivide").checked;
    let exponent=document.getElementById("choiceexponent").checked;
@@ -99,6 +84,8 @@ function chooseOp()
     result1=base**discount
    }
   
+   
+   
    document.getElementById("result1").innerHTML=result1;
 
 }
